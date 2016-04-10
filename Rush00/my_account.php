@@ -49,7 +49,7 @@ if (is_connected())
         {
             if (isset($_POST['action']) && $_POST['action'] == 'delete')
             {
-                if (!(db_deleteUser($user['usr_id'])))
+                if ((db_deleteUser($user['usr_id'])))
                 {
                     add_flash_message('success', 'Votre compte a bien ete supprime.');
                     deconnect_user();
