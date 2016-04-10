@@ -1,0 +1,44 @@
+html { font-size: 100%; }
+body { text-align: center; }
+h1 { font-size: 4vw; margin-bottom: 0}
+table { margin: 0 auto; }
+.num, .weight { font-size: 0.75vw; display: block; width: 100%; }
+.num { text-align: left; }
+.weight { text-align: right; }
+p { margin: 0; text-align: center; font-size: 1.25vw; }
+
+td { border: 1px solid #000; width: 5.5%; }
+.no-border { border: none; }
+
+.separator { text-align: left; }
+
+.gaz { color: red; }
+.liq { color: blue; }
+
+
+
+/* BORDER */
+.des { border: 1px dashed #000; }
+.syn { border: 1px dotted #000; }
+
+/* BG COLORS */
+.color-1 { background: #A0FFA0; } /* Non-metaux */
+.color-2 { background: #C0FFFF; } /* Gaz nobles */
+.color-3 { background: #FF6666; } /* Metaux alcalins */
+.color-4 { background: #FFDEAD; } /* alcalino-terreux */
+.color-5 { background: #CCCC99; } /* Metalloides */
+.color-7 { background: #CCCCCC;} /* Metaux pauvre */
+.color-8 { background: #FFC0C0; }/* Metaux de transition */
+.color-9 { background: #FFBFFF; } /* lanthanides */
+.color-10 { background: #FFFF99; } /* halogens */
+.color-11 { background: #FF99CC; } /* actinides*/
+
+/* LEGENDS */
+fieldset { margin-top: 35px; font-size: 1vw; }
+ul { list-style: none; }
+ul li { display: inline-block; padding: 10px;  }
+li.border { border: 1px solid #000; }
+
+/* RESUME */
+.resume img { height: 150px; width: auto; margin-right: 20px; }
+.resume p { text-align: left; font-size: 0.9vw; margin-bottom: 10px; }
