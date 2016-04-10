@@ -9,3 +9,5 @@
     <input type="password" id="new_password_conf" name="new_password_conf">
     <button type="submit">Modifier</button>
 </form>
+
+<a href="my_account.php?action=delete" class="btn">Supprimer mon compte</a>
