@@ -8,6 +8,5 @@
     <label for="new_password_conf">Confirmation mot de passe :</label>
     <input type="password" id="new_password_conf" name="new_password_conf">
     <button type="submit">Modifier</button>
+    <button type="submit" name="action" value="delete">Supprimer mon compte</button>
 </form>
-
-<a href="my_account.php?action=delete" class="btn">Supprimer mon compte</a>

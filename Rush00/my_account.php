@@ -12,23 +12,6 @@ if (is_connected())
         die();
     }
 
-    if ($_GET['action'] == 'delete')
-    {
-        if (!(db_deleteUser($user['usr_id'])))
-        {
-            add_flash_message('success', 'Votre compte a bien ete supprime.');
-            deconnect_user();
-            header('Location:index.php');
-            die();
-        }
-        else
-        {
-            add_flash_message('error', 'Erreur lors de la suppression du compte.');
-            header('Location:my_account.php');
-            die();
-        }
-    }
-
     $form = $user;
 
     if ($_POST)
@@ -64,6 +47,23 @@ if (is_connected())
 
         if ($form_is_valid)
         {
+            if (isset($_POST['action']) && $_POST['action'] == 'delete')
+            {
+                if (!(db_deleteUser($user['usr_id'])))
+                {
+                    add_flash_message('success', 'Votre compte a bien ete supprime.');
+                    deconnect_user();
+                    header('Location:index.php');
+                    die();
+                }
+                else
+                {
+                    add_flash_message('error', 'Erreur lors de la suppression du compte.');
+                    header('Location:my_account.php');
+                    die();
+                }
+            }
+
             $data = array(
                 'usr_id'        => $user['usr_id'],
                 'usr_name'      => $user['usr_name'],
