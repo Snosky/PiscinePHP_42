@@ -1,0 +1,33 @@
+<- Vertex ---------------------------------------------------------------------
+The Vertex class handles vertex position and color.
+
+An instance require 3 values of type float: X, Y and Z.
+    float: X : Abscissa
+    float: Y : Ordinate
+    float: Z : Depth
+    ---
+    new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2) );
+
+You can add 2 more optional values.
+    float: W : Homogeneous coordinates
+        Default value: 1.0
+    ---
+    new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2, 'w' => 1.0) );
+    OR
+    $vertex = new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2) );
+    $vertex->setW(1.0);
+
+
+    Color: color : Instance of class Color
+        Default value : Color( array('rgb' => '0xFFFFFF') ); // White
+    ---
+    new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2, 'color' => new Color( array('rgb' => '0xFFFFFF')) );
+    OR
+    $vertex = new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2) );
+    $vertex->setColor( new Color( array('rgb' => '0xFFFFFF')) );
+    ---
+    For more information about Color class : echo Color::doc();
+
+The class provides the following methods :
+Setters and Getters for all property.
+--------------------------------------------------------------------- Vertex ->

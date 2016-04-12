@@ -16,3 +16,9 @@
     <input type="hidden" name="itm_id" value="<?php myecho($item['itm_id']) ?>">
     <button class="btn" type="submit">Ajouter au panier</button>
 </form>
+
+<?php if (TRUE): ?>
+
+<?php else: ?>
+
+<?php endif; ?>?

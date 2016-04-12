@@ -1,0 +1,49 @@
+<- Vector ---------------------------------------------------------------------
+The Vector class handles all vector's operations.
+
+An instance require 1 values of type \Vertex.
+    \Vertex: dest : Vector's vertex destination
+    ---
+    new Vector( array(
+        'dest' => new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2) )
+    ) );
+    ---
+    For more information about Vertex : echo Vertex::doc();
+
+You can add 1 more optional value.
+    \Vertex: orig : Vector's vertex origin
+        Default value: new Vertex( array( 'x' => 0, 'y' => 0, 'z' => 0, 'w' = 1) );
+    ---
+    new new Vector( array(
+        'dest' => new Vertex( array( 'x' => 1, 'y' => 1.2, 'z' => 2) ),
+        'orig' => new Vertex( array( 'x' => 0, 'y' => 0, 'z' => 0, 'w' = 1) )
+    ) );
+    ---
+    For more information about Vertex : echo Vertex::doc();
+
+The class provides the following methods:
+
+float magnitude();
+    Calculating the vector's lenght
+
+Vector normalize();
+    Return a the vector normalized
+
+Vector add( Vector $rhs )
+    Adds each coordinate and return a new Vector instance.
+
+Vector opposite( Vector $rhs)
+    Return the opposite vector.
+
+Vector scalarProduct( $k );
+    Return the sum of the vector with a scalar and return a new Vector instance.
+
+float dorProduct( Vector $rhs );
+    Return the scalar product of 2 vectors
+
+float cos( Vector $rhs );
+    Return cosine of the angle of 2 vectors
+
+Vector crossProduct( Vector $rhs );
+    Return the cross product of 2 vector in a new Vector instance.
+--------------------------------------------------------------------- Vector ->
