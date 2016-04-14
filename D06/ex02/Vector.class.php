@@ -90,11 +90,22 @@ class Vector
 
     public function normalize()
     {
-        $vertex = new Vertex(array(
+        if ($this->getW() != 0)
+        {
+          $vertex = new Vertex(array(
+            'x' => $this->getX() / $this->getW(),
+            'y' => $this->getY() / $this->getW(),
+            'z' => $this->getZ() / $this->getW(),
+          ));
+        }
+        else
+        {
+          $vertex = new Vertex(array(
             'x' => $this->getX() / $this->magnitude(),
             'y' => $this->getY() / $this->magnitude(),
             'z' => $this->getZ() / $this->magnitude(),
-        ));
+          ));
+        }
         return new Vector(array('dest' => $vertex));
     }
 
